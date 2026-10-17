@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142d2b"><meta name="description" content="A case competition workspace. Compare strategic options, build an editable slide storyline, rehearse your pitch, and prepare for judges’ questions.">
+<title>Case Room — Decide. Storyline. Defend.</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23142d2b'/%3E%3Cpath d='M17 18h30v6H35v25h-6V24H17z' fill='%23e8b48b'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#editor" class="skip-link">Skip to case editor</a>
+<div class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="./" aria-label="Case Room home"><span class="brand-mark">C<span>·</span></span><span>case<span class="brand-light">room</span><small>THE CASE COMPETITION WORKSPACE</small></span></a>
+<div class="sidebar-body"><p class="nav-label">YOUR WORKSPACE</p><button class="nav-item selected" id="workspaceButton"><span aria-hidden="true">▤</span> Case workspace <span class="nav-dot"></span></button><button class="nav-item" id="libraryButton"><span aria-hidden="true">▱</span> Saved cases <span class="count" id="libraryCount">1</span></button><button class="nav-item" id="guideButton"><span aria-hidden="true">◉</span> How it works</button>
+<div class="sidebar-note"><div class="small-orbit" aria-hidden="true">↗</div><h3>A strong case survives questions.</h3><p>Choose your move. Tell the story. Defend the trade-off.</p></div>
+</div><div class="privacy-note"><span class="privacy-dot"></span><div>Saved on this browser<small>No account. No case uploads.</small></div></div>
+</aside>
+<main>
+<header class="topbar"><div><span class="breadcrumb">Workspace</span><span class="breadcrumb-slash">/</span><span id="breadcrumbCompany">Case workspace</span></div><div class="topbar-right"><span class="save-status" id="saveStatus" role="status">Ready</span><button class="button subtle" id="newButton"><span aria-hidden="true">＋</span> New case</button><button class="button primary" id="exportButton"><span aria-hidden="true">↗</span> Export case pack</button></div></header>
+<div class="page-content">
+<section class="page-heading"><div><p class="eyebrow">FOR THE MOMENT BEFORE THE FINAL ROUND</p><h1>Make your case. Then defend it.</h1><p class="page-subtitle">Choose the move. Shape the story. Be ready for the judges.</p></div><div class="heading-badge"><span aria-hidden="true">✳</span> Built for teams with a point of view</div></section>
+<section class="workspace-pulse" aria-label="Case preparation progress"><div class="pulse-metric"><span class="eyebrow">PREPARATION CHECKS</span><strong id="prepCount">0 / 10</strong><progress id="prepProgress" max="10" value="0" aria-label="Completed preparation checks"></progress><small>Structure, not a quality score</small></div><div class="pulse-metric pulse-practice"><span class="eyebrow">LAST REHEARSAL</span><strong id="lastRun">Not yet rehearsed</strong><small>Your plan and practice stay connected</small></div><div class="pulse-action"><span class="eyebrow">YOUR NEXT MOVE</span><button class="button primary" id="nextMove">Continue your preparation <span aria-hidden="true">→</span></button></div></section>
+<div id="alertBanner" class="alert-banner" hidden></div>
+<div class="example-banner" id="exampleBanner"><div><span class="sample-icon" aria-hidden="true">◇</span><span><strong>You’re exploring a fictional example.</strong> All case facts and figures are illustrative.</span></div><button id="startBlankButton">Make it yours <span aria-hidden="true">↗</span></button></div>
+<div class="workspace-grid">
+<section class="editor-panel" id="editor" tabindex="-1" aria-label="Case workspace editor">
+<div class="panel-heading"><div><span class="eyebrow">YOUR CASE ROOM</span><h2 id="panelTitle">The decision</h2></div><span class="version-badge">CASE PREP</span></div>
+<div class="step-tabs" role="tablist" aria-label="Case preparation stages"><button role="tab" id="tab-decide" aria-controls="editorFields" aria-selected="true" data-step="decide"><span>01</span> Decide</button><button role="tab" id="tab-story" aria-controls="editorFields" aria-selected="false" data-step="story"><span>02</span> Storyline</button><button role="tab" id="tab-rehearse" aria-controls="editorFields" aria-selected="false" data-step="rehearse"><span>03</span> Rehearse</button><button role="tab" id="tab-questions" aria-controls="editorFields" aria-selected="false" data-step="questions"><span>04</span> Judge Q&A</button></div>
+<div class="editor-fields" id="editorFields" role="tabpanel" aria-labelledby="tab-decide"></div>
+<div class="editor-footer"><span id="stepHint">First, take a position.</span><button class="button next-button" id="nextButton">Add evidence <span aria-hidden="true">→</span></button></div>
+</section>
+<aside class="preview-column" aria-label="Live case preparation snapshot"><div class="preview-top"><span><span class="live-dot"></span> DEFENSE SNAPSHOT</span><button id="expandButton" class="text-button">Read full pack <span aria-hidden="true">↗</span></button></div><div id="previewMemo" class="memo-paper"></div><div class="preview-footnote"><span aria-hidden="true">⤴</span> One decision. A story that holds together.</div></aside>
+</div>
+<footer class="page-footer"><span>caseroom <span class="muted">/ From the first framework to the final question.</span></span><span>DECIDE / STORYLINE / REHEARSE</span></footer>
+</div>
+</main>
+</div>
+<div id="printArea"></div>
+<dialog id="libraryDialog" aria-labelledby="libraryTitle"><div class="dialog-heading"><div><p class="eyebrow">YOUR WORKSPACE</p><h2 id="libraryTitle">Saved cases</h2></div><button class="icon-button" data-close aria-label="Close saved cases">×</button></div><p class="dialog-subtitle">Stored in this browser. Download a backup to move a case to another device.</p><div id="libraryList"></div><div class="dialog-actions"><button class="button subtle" id="importButton">Import backup</button><button class="button primary" id="libraryNewButton">＋ New case</button></div><input type="file" id="importInput" accept="application/json,.json" hidden></dialog>
+<dialog id="exportDialog" aria-labelledby="exportTitle"><div class="dialog-heading"><div><p class="eyebrow">READY FOR THE TEAM HUDDLE</p><h2 id="exportTitle">The whole case, in one pack.</h2></div><button class="icon-button" data-close aria-label="Close export">×</button></div><p id="exportSummary" class="dialog-subtitle"></p><div class="export-options"><button id="htmlButton"><span class="export-icon">↗</span><span><strong>Download reading copy</strong><small>Decision, storyline, Q&A, and rehearsal notes.</small></span><span>→</span></button><button id="printButton"><span class="export-icon">▤</span><span><strong>Print / Save as PDF</strong><small>A printable case pack with sources and assumptions.</small></span><span>→</span></button><button id="markdownButton"><span class="export-icon">↓</span><span><strong>Download Markdown</strong><small>Editable outline and defense notes for your team.</small></span><span>→</span></button><button id="backupButton"><span class="export-icon">▱</span><span><strong>Download editable backup</strong><small>JSON file. Import it to keep working elsewhere.</small></span><span>→</span></button></div><p class="export-note">Exports include incomplete sections and user-supplied source details. Review them before sharing.</p></dialog>
+<dialog id="guideDialog" aria-labelledby="guideTitle"><div class="dialog-heading"><div><p class="eyebrow">BEFORE YOU BUILD THE DECK</p><h2 id="guideTitle">One case. Three connected stages.</h2></div><button class="icon-button" data-close aria-label="Close guide">×</button></div><ol class="guide-list"><li><strong>Decide what you stand for.</strong><p>Frame the decision, compare three alternatives, and write the recommendation. Scores organise your judgment; evidence supports it.</p></li><li><strong>Shape the storyline.</strong><p>Generate an editable six-slide speaking outline from your own inputs. Adapt it to the official brief and required deliverables.</p></li><li><strong>Practice the defense.</strong><p>Rehearse the pitch against slide timings. Then prepare answers to six questions about your trade-offs, assumptions, economics, and execution.</p></li></ol><div class="guide-notice">Your cases and notes save only in this browser. Export a JSON backup to keep editing elsewhere. This MVP uses templates, not AI judging or research. Timer sessions reset on reload; saved notes and the last completed rehearsal remain. Follow your competition’s rules on tools and outside assistance.</div><button class="button subtle" id="loadExampleButton">Load a fictional sample case</button></dialog>
+<dialog id="confirmDialog" aria-labelledby="confirmTitle"><h2 id="confirmTitle">Delete this case?</h2><p id="confirmMessage"></p><div class="dialog-actions"><button class="button subtle" id="cancelConfirm">Cancel</button><button class="button danger" id="acceptConfirm">Delete case</button></div></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+<script type="module" src="app.js"></script>
+</body></html>

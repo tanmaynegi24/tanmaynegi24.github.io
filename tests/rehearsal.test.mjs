@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {sampleCase,newTimer,start,pause,advance,elapsed,pacing,plan,clock} from '../dist/core.js';
+test('pause/resume excludes paused time',()=>{let t=start(newTimer(),1000);assert.equal(elapsed(t,11000),10000);t=pause(t,11000);assert.equal(elapsed(t,31000),10000);t=start(t,31000);assert.equal(elapsed(t,36000),15000);});
+test('advancing keeps total elapsed and finish records six splits',()=>{let t=start(newTimer(),0);for(let i=1;i<=6;i++){t=advance(t,i*10000);assert.equal(elapsed(t,i*10000),i*10000);}assert.equal(t.finished,true);assert.equal(t.running,false);assert.equal(t.splits.length,6);assert.deepEqual(t.splits.map(s=>s.seconds),[10,10,10,10,10,10]);});
+test('invalid timing plan reports mismatch',()=>{const b=sampleCase();b.slides[0].seconds='20';assert.equal(plan(b).valid,false);assert.ok(plan(b).errors.some(x=>x.includes('290s')));});
+test('delayed ticks reflect real elapsed and negative remaining',()=>{const t=start(newTimer(),0),p=pacing(sampleCase(),t,310000);assert.equal(p.elapsed,310);assert.equal(p.remaining,-10);assert.equal(clock(p.remaining),'−00:10');});
+test('when behind identify a future optional slide',()=>{let t=start(newTimer(),0);t=advance(t,50000);const p=pacing(sampleCase(),t,51000);assert.equal(p.behind,20);assert.equal(p.optional,2);});
