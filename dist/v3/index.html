@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="A browser-only Case Room preview for case competition teams, from problem framing and evidence to recommendation and judge defence." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Case Room V3 — case preparation, connected" />
+    <meta property="og:description" content="Explore a case competition workflow from brief and evidence to recommendation and judge defence." />
+    <meta property="og:url" content="https://caseroom.me/v3/" />
+    <link rel="canonical" href="https://caseroom.me/v3/" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Case Room V3 — Case preparation, connected</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Case Room home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>case<span class="brand-light">room</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#workflow">How it works</a>
+        <a href="#toolkit">Competition toolkit</a>
+        <a href="#team-room">Team rooms</a>
+        <a href="#navigator">Case Navigator</a>
+      </nav>
+      <div class="top-actions">
+        <span class="preview-badge"><span class="status-dot"></span> V3 preview</span>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section-wrap" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-rule"></span> A clearer way to compete</p>
+          <h1 id="hero-title">Make your case<br /><em>easy to defend.</em></h1>
+          <p class="hero-intro">Bring your team’s thinking into one room. Connect the evidence to the recommendation, shape the story, and practise the questions judges will ask.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" id="walkthrough-button" type="button">Try the fictional walkthrough <span aria-hidden="true">↗</span></button>
+            <a class="button button-quiet" href="#team-room">Join with a room code <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-proof"><span class="avatars" aria-hidden="true"><i>A</i><i>M</i><i>R</i></span><span>One team. One clear argument.</span><span class="proof-divider" aria-hidden="true"></span><span>Built for case competitions</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Preview of a team's case preparation">
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+          <div class="brief-card">
+            <div class="brief-header"><div><span class="mini-label">FICTIONAL PRODUCT EXAMPLE</span><h2>Northstar Foods</h2></div><span class="more-button" aria-hidden="true">···</span></div>
+            <div class="brief-meta"><span class="meta-icon">↗</span><span>Market expansion</span><span class="meta-dot">·</span><span>Strategy sprint</span></div>
+            <div class="progress-row"><span>Case readiness</span><strong id="hero-progress-label">68%</strong></div>
+            <div class="progress-track"><span id="hero-progress-bar" style="width:68%"></span></div>
+            <div class="brief-divider"></div>
+            <div class="next-label"><span class="spark-icon">✳</span> NEXT USEFUL STEP</div>
+            <div class="next-action"><span class="action-number">01</span><div><strong id="hero-next-title">Ground the recommendation</strong><p id="hero-next-copy">Add the evidence behind your pilot-market choice.</p></div><span class="arrow-circle" aria-hidden="true">↗</span></div>
+            <div class="mini-checks"><span><b class="check-done">✓</b> Decision</span><span><b class="check-done">✓</b> Storyline</span><span><b class="check-open">•</b> Evidence</span></div>
+            <div class="card-note"><span class="note-bloom" aria-hidden="true">✳</span><span>Keep the why connected to the what.</span></div>
+          </div>
+          <div class="floating-note note-top"><span class="note-icon teal-icon">↗</span><span><strong>One recommendation</strong><small>your team can stand behind</small></span></div>
+          <div class="floating-note note-bottom"><span class="note-icon rust-icon">◎</span><span><strong>Prepared for the room</strong><small>not just the slide deck</small></span></div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Product principles">
+        <div class="trust-inner"><span>DESIGNED AROUND YOUR TEAM’S REASONING</span><span class="trust-item"><b>01</b> Decide together</span><span class="trust-item"><b>02</b> Keep evidence in view</span><span class="trust-item"><b>03</b> Defend the call</span></div>
+      </section>
+
+      <section class="workflow section-wrap" id="workflow">
+        <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-rule"></span> From brief to boardroom</p><h2>Good cases connect<br /><em>the whole argument.</em></h2></div><p class="section-summary">A recommendation gets stronger when the facts, assumptions, numbers and story all point in the same direction.</p></div>
+        <div class="workflow-grid">
+          <article class="workflow-step"><span class="step-index">01 / FRAME</span><div class="step-art frame-art"><span class="frame-circle circle-a"></span><span class="frame-circle circle-b"></span><span class="frame-node">?</span><span class="frame-line"></span><span class="frame-node node-last">!</span></div><h3>Find the real decision</h3><p>Turn a long brief into one question your team must answer.</p><span class="step-foot">START WITH THE CHOICE <span>↗</span></span></article>
+          <article class="workflow-step"><span class="step-index">02 / BUILD</span><div class="step-art build-art"><span class="build-bar bar-one"></span><span class="build-bar bar-two"></span><span class="build-bar bar-three"></span><span class="build-dot"></span><span class="build-line"></span></div><h3>Connect proof to the call</h3><p>Keep evidence and assumptions attached to the claims they support.</p><span class="step-foot">SHOW YOUR REASONING <span>↗</span></span></article>
+          <article class="workflow-step"><span class="step-index">03 / DEFEND</span><div class="step-art defend-art"><div class="speech speech-one">Why this market?</div><div class="speech speech-two">Here’s our proof.</div><span class="speech-tail"></span></div><h3>Prepare for the room</h3><p>Shape the story, rehearse the pitch, and practise judge questions.</p><span class="step-foot">MAKE THE CASE HOLD <span>↗</span></span></article>
+        </div>
+      </section>
+
+      <section class="toolkit-section section-wrap" id="toolkit" aria-labelledby="toolkit-title">
+        <div class="section-heading toolkit-heading"><div><p class="eyebrow"><span class="eyebrow-rule"></span> The full competition journey</p><h2 id="toolkit-title">More than a deck.<br /><em>A case-prep toolkit.</em></h2></div><p class="section-summary">Explore the jobs a competition team needs to do—from understanding the brief to answering the final judge question. This V3 map separates the local demo from capabilities still to build.</p></div>
+        <div class="toolkit-explorer">
+          <div class="toolkit-tabs" role="tablist" aria-label="Case competition preparation stages">
+            <button class="toolkit-tab" id="tab-frame" type="button" role="tab" aria-selected="true" aria-controls="toolkit-panel" data-toolkit="frame">Frame the case</button>
+            <button class="toolkit-tab" id="tab-research" type="button" role="tab" aria-selected="false" aria-controls="toolkit-panel" data-toolkit="research" tabindex="-1">Research &amp; size</button>
+            <button class="toolkit-tab" id="tab-decide" type="button" role="tab" aria-selected="false" aria-controls="toolkit-panel" data-toolkit="decide" tabindex="-1">Choose &amp; model</button>
+            <button class="toolkit-tab" id="tab-story" type="button" role="tab" aria-selected="false" aria-controls="toolkit-panel" data-toolkit="story" tabindex="-1">Build the story</button>
+            <button class="toolkit-tab" id="tab-defend" type="button" role="tab" aria-selected="false" aria-controls="toolkit-panel" data-toolkit="defend" tabindex="-1">Practise &amp; defend</button>
+          </div>
+          <div class="toolkit-panel" id="toolkit-panel" role="tabpanel" aria-labelledby="tab-frame" tabindex="0">
+            <div class="toolkit-panel-copy"><span class="toolkit-stage-label" id="toolkit-kicker">01 · UNDERSTAND THE ASK</span><h3 id="toolkit-stage-title">Turn the brief into a decision.</h3><p id="toolkit-stage-copy">Find the decision-maker, objective, constraints, stakeholders and the real question hidden inside the case. Keep facts supplied in the brief separate from your team’s assumptions.</p><div class="toolkit-status-note"><span aria-hidden="true">●</span><span id="toolkit-stage-status">Partly demonstrated in the local preview; structured brief extraction is a planned feature.</span></div></div>
+            <div class="toolkit-feature-list" id="toolkit-feature-list" aria-live="polite"></div>
+          </div>
+          <div class="toolkit-demo-callout"><div><strong>Designed for the work behind a case win</strong><p>Case Room should connect the team’s reasoning—not generate a black-box answer. Every recommendation stays tied to evidence, assumptions, calculations and defence.</p></div><a class="button button-outline" href="#navigator">See the local Navigator demo <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+
+      <section class="walkthrough section-wrap" id="guided-start">
+        <div class="walkthrough-intro"><p class="eyebrow"><span class="eyebrow-rule"></span> A hands-on preview</p><h2>Start with your<br /><em>team’s question.</em></h2><p>Try a fictional case to explore the flow, or enter your own idea. This preview stays on this device and does not sync or create a real room.</p><div class="fiction-label"><span class="fiction-icon">✳</span><span><strong>Fictional walkthrough</strong><small>Northstar Foods is a made-up case for this preview.</small></span></div></div>
+        <div class="case-builder" id="case-builder">
+          <div class="builder-top"><span class="builder-step">YOUR CASE <b>01</b><span class="builder-line"></span><b class="muted-step">02</b> RECOMMEND</span><span class="local-tag"><span></span> Browser draft · save to keep</span></div>
+          <div class="case-savebar"><div><strong>Your private case draft</strong><span id="case-save-status" role="status" aria-live="polite">Saved only in this browser when you choose Save.</span></div><div class="case-save-actions"><button class="button button-outline" id="save-case" type="button">Save draft</button><button class="text-button" id="load-case" type="button">Reopen saved</button><button class="text-button" id="export-case" type="button">Download backup</button><button class="text-button" id="clear-case" type="button">Clear</button></div></div>
+          <form id="case-form">
+            <label for="case-title">What is your team working on?</label>
+            <input id="case-title" name="case-title" maxlength="72" placeholder="e.g. A market-entry decision for a growing brand" autocomplete="off" required />
+            <label for="case-question">What decision does the case ask you to make?</label>
+            <textarea id="case-question" name="case-question" rows="3" maxlength="480" placeholder="In a sentence or two, explain the challenge your team needs to solve." required></textarea>
+            <label for="case-recommendation">What is your team leaning toward? <span class="optional-label">Optional</span></label>
+            <textarea id="case-recommendation" name="case-recommendation" rows="2" maxlength="300" placeholder="A first recommendation is enough. You can refine it together."></textarea>
+            <div class="form-footer"><span>Start with what you know. Refine it with your team.</span><button class="button button-primary" type="submit">Open the workspace <span aria-hidden="true">→</span></button></div>
+          </form>
+          <div class="builder-preview" id="builder-preview" hidden role="status" aria-live="polite"><span class="builder-check">✓</span><div><strong id="builder-result-title">Your case is ready</strong><p id="builder-result-copy">Next, make the decision explicit.</p></div><button type="button" id="go-navigator" class="text-button">See your next step ↗</button></div>
+        </div>
+      </section>
+
+      <section class="tools-lab section-wrap" id="practice-tools" aria-labelledby="tools-title">
+        <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-rule"></span> Hands-on case tools</p><h2 id="tools-title">Work the numbers.<br /><em>Practise the pressure.</em></h2></div><p class="section-summary">Use these original, browser-only tools to practise sizing, unit economics and pitch timing. Calculations are only as sound as your inputs; no research is fetched or verified.</p></div>
+        <div class="tools-grid">
+          <article class="tool-card" aria-labelledby="market-tool-title"><div class="tool-card-kicker">01 · MARKET SIZING</div><h3 id="market-tool-title">Build a simple market estimate</h3><p>Start with an addressable population, narrow it to the target segment, then estimate annual spend.</p><div class="tool-fields"><label>Relevant population<input id="market-population" type="number" min="0" step="1" value="1000000" inputmode="numeric"></label><label>Target segment (%)<input id="market-segment" type="number" min="0" max="100" step="0.1" value="15" inputmode="decimal"></label><label>Annual spend per customer (₹)<input id="market-spend" type="number" min="0" step="100" value="12000" inputmode="decimal"></label></div><button class="button button-primary tool-run" id="calculate-market" type="button">Estimate market</button><div class="tool-result" id="market-result" role="status" aria-live="polite">Enter assumptions to calculate an illustrative serviceable market.</div><small class="tool-footnote">Formula: population × target share × annual spend. Not researched market data.</small></article>
+          <article class="tool-card" aria-labelledby="unit-tool-title"><div class="tool-card-kicker">02 · UNIT ECONOMICS</div><h3 id="unit-tool-title">See the break-even logic</h3><p>Check contribution per unit and the volume needed to cover a monthly fixed-cost base.</p><div class="tool-fields"><label>Revenue per unit (₹)<input id="unit-price" type="number" min="0" step="10" value="500" inputmode="decimal"></label><label>Variable cost per unit (₹)<input id="unit-cost" type="number" min="0" step="10" value="280" inputmode="decimal"></label><label>Monthly fixed costs (₹)<input id="fixed-cost" type="number" min="0" step="1000" value="220000" inputmode="decimal"></label></div><button class="button button-primary tool-run" id="calculate-unit" type="button">Calculate break-even</button><div class="tool-result" id="unit-result" role="status" aria-live="polite">Add your assumptions to see the contribution and break-even volume.</div><small class="tool-footnote">Excludes taxes, working capital and other costs. Validate assumptions independently.</small></article>
+          <article class="tool-card drill-card" aria-labelledby="drill-title"><div class="tool-card-kicker">03 · ORIGINAL MINI CASE DRILL</div><h3 id="drill-title">Choose the next best test</h3><p id="drill-prompt">A meal-kit pilot has high first-order conversion but weak repeat purchase. Which first analysis best tests whether to expand?</p><div class="drill-options" id="drill-options" role="group" aria-label="Answer choices"><button type="button" class="drill-option" data-answer="0">Compare repeat rates by customer cohort and acquisition channel.</button><button type="button" class="drill-option" data-answer="1">Increase the marketing budget in every city.</button><button type="button" class="drill-option" data-answer="2">Assume the first-order conversion proves product-market fit.</button></div><div class="drill-feedback" id="drill-feedback" role="status" aria-live="polite">Pick an answer to see the reasoning.</div><div class="drill-footer"><span id="drill-score">Practice 1 of 3</span><button type="button" class="text-button" id="next-drill">Next question →</button></div></article>
+          <article class="tool-card timer-card" aria-labelledby="timer-title"><div class="tool-card-kicker">04 · REHEARSAL TIMER</div><h3 id="timer-title">Practise to the clock</h3><p>Set your team's presentation length and run a simple rehearsal timer.</p><label class="timer-setting" for="timer-minutes">Presentation target (minutes)<input id="timer-minutes" type="number" min="1" max="60" value="7" inputmode="numeric"></label><div class="timer-display" id="timer-display" role="timer" aria-live="off">07:00</div><div class="timer-actions"><button class="button button-primary" id="timer-start" type="button">Start timer</button><button class="button button-outline" id="timer-reset" type="button">Reset</button></div><p class="timer-note" id="timer-note" role="status" aria-live="polite">Ready when your team is.</p></article>
+        </div>
+        <p class="tools-privacy"><strong>Browser-only preview:</strong> case drafts stay in this browser when saved. No account, shared team room, backend or AI is connected. Avoid storing confidential competition material on a shared device.</p>
+      </section>
+
+      <section class="room-section section-wrap" id="team-room">
+        <div class="room-card">
+          <div class="room-copy"><p class="eyebrow"><span class="eyebrow-rule"></span> Work in the same room</p><h2>One code gets<br /><em>your team started.</em></h2><p>Share a room code with your teammates. Everyone who joins can edit the case; the room owner manages access.</p><div class="editor-note"><span class="editor-icon">✎</span><span><strong>Everyone can edit</strong><small>No viewer role in a team case.</small></span></div></div>
+          <div class="join-panel"><div class="join-panel-header"><span class="join-icon">⌘</span><span><strong>Join a team room</strong><small>Enter the code shared by your team lead.</small></span></div><form id="join-form"><label for="room-code">Room code</label><div class="code-input-wrap"><span class="code-prefix">#</span><input id="room-code" name="room-code" autocomplete="off" autocapitalize="characters" maxlength="24" placeholder="ENTER CODE" aria-describedby="join-help join-feedback" /><button type="submit" class="join-arrow" aria-label="Try demo room code">→</button></div><p id="join-help" class="input-help">For this preview, use <button type="button" class="inline-code" id="fill-code">TEAM42</button></p><p id="join-feedback" class="join-feedback" aria-live="polite"></p></form><div class="simulated-notice"><span>ⓘ</span><p><strong>Preview only:</strong> this demonstrates the join flow. No account, room, shared edits, or server connection is created.</p></div><div class="room-access" id="room-access" hidden><div class="room-access-top"><span class="room-online">SIMULATED ROOM</span><span class="room-id">FICTIONAL TEAM SPACE</span></div><h3>Northstar launch plan</h3><p>This mock screen is not a live team session. In a real room, every admitted teammate can edit.</p><div class="room-people"><span class="person-chip">Editor access · concept</span><span class="person-chip person-owner">Owner manages access</span></div></div></div>
+        </div>
+      </section>
+
+      <section class="navigator-section section-wrap" id="navigator">
+        <div class="navigator-head"><div><p class="eyebrow"><span class="eyebrow-rule"></span> Your Case Navigator</p><h2>Know what to<br /><em>strengthen next.</em></h2></div><div class="navigator-head-note"><span class="navigator-spark">✳</span><p>Guidance based on what your team has written. It spots gaps and links you to the work—<strong>it does not verify facts or judge your answer.</strong></p></div></div>
+        <div class="navigator-workspace">
+          <div class="case-context">
+            <div class="context-top"><span class="context-label">NORTHSTAR FOODS · FICTIONAL WALKTHROUGH</span><span class="context-status">Fictional preview</span></div>
+            <h3>Where should Northstar expand next?</h3>
+            <p class="context-desc">A regional meal-kit brand is choosing its next growth market. Your team recommends a two-city pilot before committing to a national rollout.</p>
+            <div class="decision-box"><span class="decision-number">01</span><div><span class="field-label">TEAM RECOMMENDATION</span><p id="recommendation-text">Run a two-city pilot, then expand if repeat orders meet the target.</p></div><span class="linked-icon">↗</span></div>
+            <div class="evidence-panel" id="evidence-panel" hidden><label for="evidence-input">Evidence or assumption note</label><textarea id="evidence-input" rows="2" placeholder="Add your team's source, observation, or label this as an assumption."></textarea><div class="evidence-actions"><span>Case Room does not verify sources.</span><button type="button" class="text-button" id="save-evidence">Save note ↗</button></div></div>
+            <div class="input-group"><div class="field-heading"><label for="assumption-input">Critical assumption</label><span class="field-label">DRIVES YOUR STORY</span></div><textarea id="assumption-input" rows="2">Customers in the pilot cities will order repeatedly after trying their first box.</textarea><button class="button button-outline" id="update-assumption" type="button" disabled>Save assumption change <span aria-hidden="true">→</span></button><p class="assumption-help" id="assumption-help">Change the assumption, then save to see which parts of the argument may need review.</p></div>
+            <div class="downstream-review" id="downstream-review" hidden role="status" aria-live="polite"><span class="review-mark">!</span><div><strong>Review two connected sections</strong><p>This assumption changed in the preview. Check whether the pitch rationale and judge answer still fit. Your writing has not been changed.</p></div><button class="text-button" type="button" id="review-linked">Jump to first section ↗</button></div>
+            <div class="linked-fields" id="linked-fields"><div class="linked-field"><span class="linked-bullet"></span><div><label class="field-label" for="story-text">PITCH RATIONALE</label><textarea id="story-text" rows="2">The pilot keeps risk low while Northstar learns which customers come back.</textarea></div><span class="field-state" id="story-state">Up to date</span></div><div class="linked-field"><span class="linked-bullet"></span><div><label class="field-label" for="judge-text">JUDGE Q&amp;A</label><textarea id="judge-text" rows="2">We will expand only after the repeat-order target is met.</textarea></div><span class="field-state" id="judge-state">Up to date</span></div></div>
+          </div>
+          <aside class="navigator-rail" aria-label="Case Navigator recommendation">
+            <div class="rail-header"><span class="rail-spark">✳</span><span>CASE NAVIGATOR</span><button class="rail-menu" type="button" aria-label="About Case Navigator" aria-expanded="true" aria-controls="navigator-guardrail">i</button></div>
+            <div class="priority-pill"><span></span> A useful next step</div>
+            <h3 id="navigator-title">Add support for your recommendation.</h3>
+            <p class="navigator-reason" id="navigator-reason">Your pilot choice is clear, but this walkthrough has no evidence attached yet. Add a source or label the point as an assumption.</p>
+            <div class="navigator-target"><span class="target-icon">↳</span><span><small>TAKE THIS TO</small><strong id="navigator-target-label">Evidence &amp; assumptions</strong></span></div>
+            <button class="button button-dark" id="navigator-action" type="button">Review evidence <span aria-hidden="true">↗</span></button>
+            <div class="nav-guardrail" id="navigator-guardrail"><span>✓</span><p>Rules-based guidance. It flags missing links; it does not invent sources or verify claims.</p></div>
+            <div class="nav-progress"><div class="progress-row"><span>Preparation</span><strong id="navigator-progress">4 of 6 steps</strong></div><div class="progress-track"><span id="navigator-progress-bar" style="width:66%"></span></div></div>
+          </aside>
+        </div>
+        <div class="proof-bar"><span class="proof-star">✳</span><p><strong>The Case Room difference:</strong> when an assumption moves, the team can see which parts of its argument may need another look.</p><span class="proof-end">ONE ARGUMENT, CONNECTED <b>↗</b></span></div>
+      </section>
+
+      <section class="closing section-wrap"><div class="closing-stamp">CR<span>·</span></div><p class="eyebrow">A better room for better reasoning</p><h2>Make the argument<br />hold together.</h2><a class="button button-primary" href="#guided-start">Try the walkthrough <span aria-hidden="true">↑</span></a><p class="closing-note">Concept preview · fictional case · local interactions only</p></section>
+    </main>
+    <footer class="footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>case<span class="brand-light">room</span></span></a><span>Made for the work behind the win.</span><span class="footer-local"><i></i> Case text is not uploaded or synced</span></footer>
+  </body>
+</html>
